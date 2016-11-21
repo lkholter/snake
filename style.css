@@ -1,0 +1,24 @@
+body {
+  background: black;
+  margin-top: 100px;
+}
+
+canvas {
+  margin: auto;
+  padding-top: 100px;
+  display: flex;
+}
+
+p1 {
+  font-family: 'Special Elite', cursive;
+  font-size: 50px;
+  color: #32CD32;
+  margin-left: 150px
+}
+
+
+p2 {
+  font-family: 'Special Elite', cursive;
+  font-size: 30px;
+  color: #8C8C8C;
+}
