@@ -56,7 +56,7 @@ function checkCollision(array) {
 
 function gameOver() {
   clearInterval(gameLoop);
-  alert("Ouch! Refresh to try again!")
+  alert("Ouch! Refresh the page to try again!")
 };
 
 //this is the canvas
