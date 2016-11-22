@@ -14,7 +14,7 @@ p1 {
   font-family: 'Special Elite', cursive;
   font-size: 50px;
   color: #32CD32;
-  margin-left: 150px
+  margin-left: 150px;
 }
 
 
@@ -29,7 +29,8 @@ p2 {
   font-family: 'Special Elite', cursive;
   font-size: 30px;
   color: #32CD32;
-  margin: 50px;
+  margin-right: 150px;
+
 }
 
 /*.start {
