@@ -1,12 +1,13 @@
 body {
   background: black;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
-canvas {
-  margin: auto;
-  padding-top: 100px;
-  display: flex;
+#canvas {
+  padding: 0;
+  margin-left: 250px;
+  margin-top: 50px;
+  display: block;
 }
 
 p1 {
@@ -22,3 +23,33 @@ p2 {
   font-size: 30px;
   color: #8C8C8C;
 }
+
+.score {
+  float: right;
+  font-family: 'Special Elite', cursive;
+  font-size: 30px;
+  color: #32CD32;
+}
+
+/*.start {
+	background-color:#32CD32;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Special Elite', cursive;;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.start:hover {
+	background-color:#5cbf2a;
+}
+.start:active {
+	position:relative;
+	top:1px;
+}*/

@@ -24,6 +24,11 @@ var character = 0;
     }, 200);
 }());
 
+// $('.start').bind("click",function(){
+//       setInterval(snakeMove, 100);
+//     });
+
+
   var canvas = $("#canvas")[0];
   var ctx = canvas.getContext('2d');
   var w = $("#canvas").width();
@@ -32,7 +37,27 @@ var character = 0;
   var direction = 'down';
   var snakeArray;
   var food;
-  var score = 0;
+
+  // var score = 0;
+  // var scoreText = $('.score');
+
+var gameLoop = setInterval(snakeMove, 100);
+
+
+function checkCollision(array) {
+  for (var i = 1; i < array.length; i++) {
+    if (array[i].x === array[0].x && array[i].y === array[0].y) {
+      console.log("collision");
+      gameOver();
+      return true;
+    };
+  };
+};
+
+function gameOver() {
+  clearInterval(gameLoop);
+  alert("Ouch! Refresh & try again!")
+};
 
 //this is the canvas
   ctx.fillStyle = "#36454F";
@@ -86,6 +111,13 @@ if (direction == 'right') {
       snakeY--;
     } else if(direction == 'down') {
       snakeY++; }
+//console.log(snakeX, snakeY);
+
+if(snakeX === -1 || snakeX === w/cS || snakeY === -1 || snakeY === h/cS) {
+  gameOver();
+}
+
+checkCollision(snakeArray);
 
 //if snake head and food are in the same place - create new food and add a cell to the snake tail
 if(snakeX == food.x && snakeY == food.y) {
@@ -93,6 +125,7 @@ if(snakeX == food.x && snakeY == food.y) {
       x: snakeX,
       y: snakeY
     };
+    // updateScore();
     createFood();
 //otherwise, the snake just keeps moving via pop and unshift
   } else {
@@ -120,8 +153,6 @@ if(snakeX == food.x && snakeY == food.y) {
   mouse(food.x, food.y);
 }
 
-setInterval(snakeMove, 100);
-
 $(document).keydown(function(e){
 var key = e.which;
 if (key == "37" && direction != "right") {
@@ -136,3 +167,9 @@ if (key == "37" && direction != "right") {
 });
 
 });
+
+
+
+// function updateScore(){
+//  $('.score').html((snakeArray.length-5)*10);
+// }
